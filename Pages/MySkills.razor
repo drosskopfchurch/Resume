@@ -1,0 +1,17 @@
+﻿@page "/myskills"
+@using Resume.UI.Models
+@using Resume.UI.Data
+@using UI.Components
+
+<PageTitle>My Skills</PageTitle>
+
+<h1>Skills</h1>
+<MySkillDetail skill=@Skills.DotNet></MySkillDetail>
+
+@foreach (var skill in @Skills.All)
+{
+    <MySkill skill=@skill></MySkill>
+}
+
+@code {
+}

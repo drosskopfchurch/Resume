@@ -1,0 +1,36 @@
+.proficiency{
+    text-align: center;
+    border-right: darkgrey 1px solid;
+    width: 40px;
+}
+.score { 
+    font-size: x-small;
+    font-weight: 600;
+    color: black;
+    background: white;
+    padding: 1px;
+    border-bottom: darkgrey 1px solid;
+}
+
+.value{
+    color: white; 
+    width: 100%;
+    display: inline;
+    font-weight: 600;
+    font-size: 2rem;
+}
+.proficiency_1 { 
+    background-color: red;
+}
+.proficiency_2 { 
+    background-color: orange;
+}
+.proficiency_3 { 
+    background-color: darkblue;
+}
+.proficiency_4 { 
+    background-color: darkgreen;
+}
+.proficiency_5 { 
+    background-color: darkmagenta;
+}

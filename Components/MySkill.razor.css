@@ -1,0 +1,58 @@
+.skill {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  vertical-align: middle;
+  border: darkgrey 1px solid;
+  margin: 4px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.arrow {
+  border: solid darkgrey;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-right: 20px;
+  height: 15px;
+  width: 15px;
+}
+.name {
+  width: 80%;
+  text-align: left;
+}
+.spacer {
+  display: inline-block;
+  padding: 3px;
+  margin-right: 20px;
+  height: 15px;
+  width: 15px;
+}
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+h3 {
+  margin: auto 10px;
+}
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.indent{
+    margin-left: 16px;
+}
+.expand {
+  color: black;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}

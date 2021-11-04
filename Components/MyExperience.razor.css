@@ -1,0 +1,18 @@
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+.label{
+    margin-top: 8px;
+    font-weight: 600;
+    color: grey;
+}
+.body{
+    margin-left: 16px;
+    margin-bottom: 16px;
+}
