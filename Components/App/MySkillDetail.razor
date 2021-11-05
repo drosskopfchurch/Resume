@@ -1,12 +1,14 @@
 @using Resume.UI.Data
 @using Resume.UI.Models
-<div class="overlay">
-    <div class="panel">
+@using UI.Components.Dumb
+<Panel show=@show>
+@* <div class="overlay">
+    <div class="panel"> *@
         <div class="header">
             <MySkillProficiency proficiency=@skill.Proficiency></MySkillProficiency>
             <h1>Skill: @skill.Name</h1>
         </div>
-        <div class="body">
+        <div class="section">
             <div class="label">
                 <h3>Detail</h3>
             </div>
@@ -14,19 +16,23 @@
                 @(skill.Description ?? "No Description")
             </div>
         </div>
-        <div class="experiences">
+        <div class="experiences section">
             <h3>Experiences</h3>
             @foreach (var experience in Experiences.GetBySkill(skill.Name))
             {
                 <MyExperience experience=@experience></MyExperience>
             }
         </div>
+    @* </div>
+</div> *@
 
-    </div>
-</div>
+</Panel>
 
 
 @code {
     [Parameter]
     public Skill skill { get; set; } = new Skill();
+
+    [Parameter]
+    public bool show { get; set; } = false;
 }

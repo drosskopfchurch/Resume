@@ -1,0 +1,14 @@
+<div class=@(Show ? "overlay show" : "overlay")>
+    <div class=@(Show ? "panel show" : "panel")>
+        <button class="close" @onclick=@(e => Show =! Show)>Close X</button>
+        @ChildContent
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public bool Show { get; set; } = true;
+}

@@ -1,5 +1,5 @@
 @using Resume.UI.Models
-<button class="skill" href="#">
+<button class="skill" @onclick="@Selected">
     <MySkillProficiency proficiency=@skill.Proficiency></MySkillProficiency>
     <div class="name">
         <h3>
@@ -48,6 +48,9 @@ else
 @code {
     [Parameter]
     public Skill skill { get; set; } = new Skill();
+    
+    [Parameter]
+    public EventCallback Selected { get; set; }
     private bool showSkills { get; set; } = false;
 
     private void toggleSkills() => showSkills = !showSkills;

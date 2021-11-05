@@ -2,16 +2,25 @@
 @using Resume.UI.Models
 @using Resume.UI.Data
 @using UI.Components
+@using UI.Components.App
 
 <PageTitle>My Skills</PageTitle>
 
 <h1>Skills</h1>
-<MySkillDetail skill=@Skills.DotNet></MySkillDetail>
 
-@foreach (var skill in @Skills.All)
+<MySkillDetail skill=@currentSkill show=@showSkill></MySkillDetail>
+@foreach (var skill in @Skills.All())
 {
-    <MySkill skill=@skill></MySkill>
+    <MySkill skill=@skill Selected=@(e => openSkill(skill))></MySkill>
 }
 
 @code {
+    private Skill currentSkill;
+    private bool showSkill;
+
+    private void openSkill(Skill skill)
+    {
+        currentSkill = skill;
+        showSkill = true;
+    }
 }

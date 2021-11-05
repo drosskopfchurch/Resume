@@ -367,13 +367,17 @@ namespace Resume.UI.Data
         //         GeneralWebDevelopment,
         //         AzureDevOps
         //     };
-        public static IList<Skill?> All => typeof(Skills)
-                                            .GetFields()
-                                            // .Where(p => 
-                                            //     p != null &&  
-                                            //     p.GetValue(null) != null && 
-                                            //     p.GetValue(null).GetType().Equals(typeof(Skill)))
-                                            .Select(p => (Skill) p.GetValue(null))
-                                            .ToList();
+        public static IList<Skill?> All()
+        {
+            return typeof(Skills)
+            .GetProperties()
+            .Where(p =>
+                        p != null &&
+                        p.GetValue(null) != null &&
+                        p.GetValue(null).GetType().Equals(typeof(Skill)))
+                    .Select(p => (Skill)p.GetValue(null))
+                    .ToList();
+
+        }
     }
 }
