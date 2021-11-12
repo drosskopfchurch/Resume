@@ -5,20 +5,19 @@
 @* <div class="overlay">
     <div class="panel"> *@
         <div class="header">
-            <MySkillProficiency proficiency=@skill.Proficiency></MySkillProficiency>
-            <h1>@skill.Name</h1>
+            <h1>@position.Name</h1>
         </div>
         <div class="section">
             <div class="label">
                 <h3>Detail</h3>
             </div>
             <div class="details">
-                @(skill.Description ?? "No Description")
+                @(position.Description ?? "No Description")
             </div>
         </div>
         <div class="experiences section">
             <h3>Experiences</h3>
-            @foreach (var experience in Experiences.GetBySkill(skill.Name))
+            @foreach (var experience in Experiences.GetByPosition(position.Id))
             {
                 <MyExperience experience=@experience></MyExperience>
             }
@@ -31,7 +30,7 @@
 
 @code {
     [Parameter]
-    public Skill skill { get; set; } = new Skill();
+    public Position position { get; set; } = new Position();
 
     [Parameter]
     public bool show { get; set; } = false;

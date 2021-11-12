@@ -1,0 +1,42 @@
+@page "/mypositions"
+@using Resume.UI.Models
+@using Resume.UI.Data
+@using UI.Components.App
+
+<PageTitle>My Positions</PageTitle>
+
+<h1>My Positions</h1>
+<MyPositionDetail position=@currentPosition show=@showPosition></MyPositionDetail>
+@* <div>
+    @(JsonSerializer.Serialize(@Employers.All()))
+</div> *@
+<div class="employers">
+    @* <Timeline></Timeline> *@
+    @foreach (var employer in @Employers.All())
+    {
+        <div class="employer _@(employer.Id)">
+            <div class="year">@employer.StartDate.Year - @(employer.EndDate != null ? employer.EndDate.Value.Year : "Now")</div>
+            <div>@employer.OriginalName</div>
+        </div>
+        <div class="employerPositions">
+            <div class="timeline _@(employer.Id)"></div>    
+            <div class="positions">
+                @foreach (var position in Positions.PositionsForEmployer(employer.Id))
+                {
+                    <MyPosition position=@position OnClick=@(e => openPosition(position))></MyPosition>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    private Position currentPosition;
+    private bool showPosition;
+
+    private void openPosition(Position position)
+    {
+        currentPosition = position;
+        showPosition = true;
+    }
+}

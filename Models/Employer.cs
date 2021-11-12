@@ -2,6 +2,17 @@ namespace Resume.UI.Models
 {
     public class Employer
     {
+        public Employer(){}
+        public Employer(Employer employer)
+        {
+            Id = employer.Id;
+            OriginalName = employer.OriginalName;
+            NewName = employer.NewName;
+            Description = employer.Description;
+            StartDate = employer.StartDate;
+            EndDate = employer.EndDate;
+            LogoHref = employer.LogoHref;
+        }
         public int Id { get; set; }
         public string OriginalName { get; set; } = String.Empty;
         public string NewName { get; set; } = String.Empty;

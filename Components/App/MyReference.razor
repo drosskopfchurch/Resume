@@ -1,0 +1,20 @@
+@using Resume.UI.Models
+<div class="tile">
+    <div>
+        <a href=@reference.LinkedInHref>
+            <img src=@reference.LinkedInPicture />
+            <div class="name">
+                @reference.Name
+            </div>
+            <div class="title">
+                @reference.Title
+            </div>
+        </a>
+    </div>
+
+</div>
+
+@code {
+    [Parameter]
+    public Reference reference { get; set; } = new Reference();
+}

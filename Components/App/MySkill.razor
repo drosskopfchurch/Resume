@@ -1,5 +1,5 @@
 @using Resume.UI.Models
-<button class="skill" @onclick="@Selected">
+<button class="skill" @onclick="@OnClick">
     <MySkillProficiency proficiency=@skill.Proficiency></MySkillProficiency>
     <div class="name">
         <h3>
@@ -20,38 +20,12 @@
 
 
 </button>
-@if (@showSkills == true)
-{
-    if (@skill.Skills.Count() > 0)
-    {
-        <button class="indent expand" @onclick="@(e => toggleSkills())">
-            [-] hide breakdown
-        </button>
-    }
-    <div class="indent">
-        @foreach (var breakdownSkill in skill.Skills)
-        {
-            <MySkill skill=@breakdownSkill></MySkill>
-        }
-    </div>
-}
-else
-{
-    if (@skill.Skills.Count() > 0)
-    {
-        <button class="indent expand" @onclick="@(e => toggleSkills())">
-            [+] show breakdown
-        </button>
-    }
-}
+
 
 @code {
     [Parameter]
     public Skill skill { get; set; } = new Skill();
     
     [Parameter]
-    public EventCallback Selected { get; set; }
-    private bool showSkills { get; set; } = false;
-
-    private void toggleSkills() => showSkills = !showSkills;
+    public EventCallback OnClick { get; set; }
 }

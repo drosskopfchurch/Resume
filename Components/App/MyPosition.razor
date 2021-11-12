@@ -1,0 +1,27 @@
+@using Resume.UI.Models
+<button class="position" @onclick="@OnClick">
+    <div class="years">
+        <div>
+            @position.StartDate.Year - @(position.EndDate != null ? position.EndDate.Value.Year: "Now")
+        </div>
+    </div>
+    <div class="name">
+        <div>
+            @position.Name
+        </div>
+    </div>
+    <div class="spacer">
+    </div>
+
+</button>
+
+@code {
+    [Parameter]
+    public Position position { get; set; } = new Position();
+
+    [Parameter]
+    public EventCallback OnClick { get; set; }
+    private bool showpositions { get; set; } = false;
+
+    private void togglepositions() => showpositions = !showpositions;
+}

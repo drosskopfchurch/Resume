@@ -45,14 +45,3 @@ button {
   cursor: pointer;
   outline: inherit;
 }
-.indent{
-    margin-left: 16px;
-}
-.expand {
-  color: black;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-}

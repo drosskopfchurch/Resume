@@ -9,6 +9,7 @@ namespace Resume.UI.Data
             get =>
                 new Employer
                 {
+                    Id = 1,
                     OriginalName = "The Church of Jesus Christ of Latter-day Saints",
                     StartDate = new DateTime(2010, 6, 1),
                 };
@@ -18,10 +19,11 @@ namespace Resume.UI.Data
             get =>
                 new Employer
                 {
+                    Id = 2,
                     OriginalName = "Compliance Information Systems",
                     NewName = "Form Fox, inc.",
                     StartDate = new DateTime(2005, 11, 1),
-                    EndDate = new DateTime(2010, 5, 1)
+                    EndDate = new DateTime(2010, 5, 1),
                 };
         }
         public static Employer PartnersInLeadership
@@ -29,11 +31,11 @@ namespace Resume.UI.Data
             get =>
                 new Employer
                 {
+                    Id = 3,
                     OriginalName = "Partners In Leadership",
                     NewName = "Culture Partners",
                     StartDate = new DateTime(2003, 11, 1),
                     EndDate = new DateTime(2005, 10, 1),
-                    
                 };
         }
         public static IList<Employer> All()

@@ -1,0 +1,45 @@
+.eval {
+  display: flex;
+}
+.SuperPowers {
+  background-color: lightskyblue;
+  color: darkblue;
+  margin: 16px;
+  padding: 16px;
+  border: darkblue 1px solid;
+  width: 50%;
+  border-radius: 25px;
+  height: 100%;
+}
+.Kryptonytes {
+  background-color: lightgreen;
+  color: darkgreen;
+  margin: 16px;
+  padding: 16px;
+  border: darkgreen 1px solid;
+  width: 50%;
+  border-radius: 25px;
+  height: 100%;
+}
+.summary{
+    display: flex;
+}
+.summary img{
+    height: 250px;
+    margin-right: 16px;
+    margin-left: 16px;
+    border-radius: 25px;
+}
+.power {
+  margin: 8px;
+}
+.Kryptonyte {
+  margin: 8px;
+}
+.title {
+  font-weight: 900;
+  font-size: 14;
+}
+.name {
+  font-weight: 600;
+}

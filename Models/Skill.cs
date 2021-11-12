@@ -9,5 +9,6 @@ namespace Resume.UI.Models
         public ICollection<Skill> Skills { get; set; } = new HashSet<Skill>();
         public ICollection<Experience> Experiences { get; set; } = new HashSet<Experience>();
         public ICollection<Employer> Employers { get; set; } = new HashSet<Employer>();
+        public bool ShowSkills { get; set; } = false;
     }
 }

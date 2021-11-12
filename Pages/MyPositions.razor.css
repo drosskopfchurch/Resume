@@ -1,0 +1,40 @@
+.timeline._1{
+    border-color: blue;
+}
+.timeline._2{
+    border-color: purple;
+}
+.timeline._3{
+    border-color: green;
+}
+.timeline{
+    border-left: 3px solid;
+}
+.employerPositions{
+    display: flex;
+    margin-bottom: 16px;
+}
+.employer{
+    display: flex;
+    font-weight: 600;
+}
+.positions{
+    width: 100%;
+}
+.year{
+    margin-right: 8px;
+    border-right: 3px solid;
+    padding-right: 8px;
+}
+._1{
+    color: darkblue;
+    border-color: blue;
+}
+._2{
+    color: darkmagenta;
+    border-color: purple;
+}
+._3{
+    color: darkgreen;
+    border-color: green;
+}

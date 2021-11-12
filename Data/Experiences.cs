@@ -105,7 +105,7 @@ namespace Resume.UI.Data
                 {
                     Skills.WebDriver, 
                     Skills.Trainer, 
-                    Skills.Leader    
+                    Skills.Leadership    
                 }
             };
         }
@@ -126,7 +126,7 @@ namespace Resume.UI.Data
                 {
                     Skills.DotNet, 
                     Skills.Trainer, 
-                    Skills.Leader    
+                    Skills.Leadership    
                 }
             };
         }
@@ -146,7 +146,7 @@ namespace Resume.UI.Data
                 {
                     Skills.Angular, 
                     Skills.Trainer, 
-                    Skills.Leader    
+                    Skills.Leadership    
                 }
             };
         }
@@ -168,7 +168,7 @@ namespace Resume.UI.Data
                 {
                     Skills.DotNet, 
                     Skills.WebDriver,
-                    Skills.Automation
+                    Skills.AutomatedTesting
                 }
             };
         }
@@ -187,7 +187,7 @@ namespace Resume.UI.Data
                 Skills = new Collection<Skill>()
                 {
                     Skills.DotNet, 
-                    Skills.Automation,
+                    Skills.AutomatedTesting,
                 }
             };
         }
@@ -233,7 +233,7 @@ namespace Resume.UI.Data
                 Skills = new Collection<Skill>()
                 {
                     Skills.DotNet, 
-                    Skills.Automation,
+                    Skills.AutomatedTesting,
                     Skills.OutsideTheBoxThinking
                 }
             };
@@ -255,7 +255,7 @@ namespace Resume.UI.Data
                 Skills = new Collection<Skill>()
                 {
                     Skills.DotNet, 
-                    Skills.Automation,
+                    Skills.AutomatedTesting,
                     Skills.OutsideTheBoxThinking
                 }
             };
@@ -425,6 +425,13 @@ namespace Resume.UI.Data
             return All()
                     .Where(e => 
                         e.Skills.Any(s => s.Name == skill))
+                    .ToList();
+        }
+        public static IList<Experience> GetByPosition(int positionId)
+        {
+            return All()
+                    .Where(e => 
+                        e.Position.Id == positionId)
                     .ToList();
         }
     }

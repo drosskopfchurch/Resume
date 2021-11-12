@@ -6,17 +6,44 @@
 
 <PageTitle>My Skills</PageTitle>
 
-<h1>Skills</h1>
+<h1>My Skills</h1>
 
 <MySkillDetail skill=@currentSkill show=@showSkill></MySkillDetail>
-@foreach (var skill in @Skills.All())
+@foreach (var skill in @skills)
 {
-    <MySkill skill=@skill Selected=@(e => openSkill(skill))></MySkill>
+    <MySkill skill=@skill OnClick=@(e => openSkill(skill))></MySkill>
+    @if (@skill.ShowSkills == true)
+    {
+        if (@skill.Skills.Count() > 0)
+        {
+            <button class="indent expand" @onclick="@(e => toggleSkills(@skill))">
+                [-] hide breakdown
+            </button>
+        }
+        <div class="indent">
+            @foreach (var breakdownSkill in skill.Skills)
+            {
+                <MySkill skill=@breakdownSkill OnClick=@(e => openSkill(breakdownSkill))></MySkill>
+            }
+        </div>
+    }
+    else
+    {
+        if (@skill.Skills.Count() > 0)
+        {
+            <button class="indent expand" @onclick="@(e => toggleSkills(@skill))">
+                [+] show breakdown
+            </button>
+        }
+    }
 }
 
 @code {
     private Skill currentSkill;
+    private IList<Skill> skills = Skills.AllParents();
     private bool showSkill;
+    private bool showSkills { get; set; } = false;
+    private void toggleSkills(Skill skill) => skill.ShowSkills = !skill.ShowSkills;
 
     private void openSkill(Skill skill)
     {
