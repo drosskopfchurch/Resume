@@ -439,6 +439,18 @@ namespace Resume.UI.Data
                 Description = "I have come up with some very awesome solutions, to some very complex issues.",
                 Skills = new List<Skill>(){
                     OutsideTheBoxThinking,
+                    Troubleshooting
+                }
+            };
+        }
+        public static Skill Troubleshooting
+        {
+            get => new Skill
+            {
+                Name = "Troubleshooting",
+                Proficiency = 5,
+                Description = "I haven't come accross an issue I couldn't troubleshoot yet.",
+                Skills = new List<Skill>(){
                 }
             };
         }
@@ -575,7 +587,36 @@ namespace Resume.UI.Data
             get => new Skill
             {
                 Name = "Load Testing",
-                Proficiency = 5
+                Proficiency = 5,
+                Skills = new List<Skill>(){
+                    SilkPerformer,
+                    WAPT,
+                    VisualStudioLoadTesting
+                }
+            };
+        }
+        public static Skill SilkPerformer
+        {
+            get => new Skill
+            {
+                Name = "Silk Performer",
+                Proficiency = 4
+            };
+        }
+        public static Skill WAPT
+        {
+            get => new Skill
+            {
+                Name = "WAPT",
+                Proficiency = 4
+            };
+        }
+        public static Skill VisualStudioLoadTesting
+        {
+            get => new Skill
+            {
+                Name = "Visual Studio Load Testing",
+                Proficiency = 4
             };
         }
         // public static IList<Skill> All =>

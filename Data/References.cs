@@ -164,6 +164,33 @@ namespace Resume.UI.Data
                     Title = "Product Owner / Business Partner"                    
                 };
         }
+        public static Reference KentRappley
+        {
+            get =>
+                new Reference()
+                {
+                    Name ="H. Kent Rappley",
+                    LinkedInHref = "https://www.linkedin.com/in/dr-h-kent-rappleye-38768b10/",
+                    LinkedInPicture = "https://media-exp1.licdn.com/dms/image/C5603AQGdnFShS3y7cA/profile-displayphoto-shrink_200_200/0/1517728501481?e=1642032000&v=beta&t=rySJUWzcgctIFYlqT023nyF9hPEo_gxXsQJoykHmQWw",
+                    Description = @"Kent, is the product owner over Ecclesiastical Endorsements. He can speak to my ability to lead projects, manage expectations, and manage relationships.
+                                    He has been very satisfied with both my work, and great talent at solutioning.",
+                    Title = "Product Owner / Business Partner"                    
+                };
+        }
+        public static Reference MatthewKit
+        {
+            get =>
+                new Reference()
+                {
+                    Name ="Matthew Kit",
+                    LinkedInHref = "https://www.linkedin.com/in/mkinkllc/",
+                    LinkedInPicture = "https://media-exp1.licdn.com/dms/image/C4D03AQFdteMCBWZyFQ/profile-displayphoto-shrink_200_200/0/1516576362443?e=1642032000&v=beta&t=9wv-xrcbkHw2b90bVKboSXiQL1J3EqLIrnUYHyRQEJU",
+                    Description = @"Matthew is the most talented IXD I have worked with.  We have collaborated on a couple projects, and have a strong mutual appreciation
+                                    for the work we can accomplish together.",
+                    Title = "Product Owner / Business Partner"                    
+                };
+        }
+
         public static IList<Reference> All() => 
         typeof(References)
             .GetProperties()

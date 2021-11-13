@@ -61,7 +61,8 @@ namespace Resume.UI.Data
                 {
                     Skills.AngularJs, 
                     Skills.DotNet, 
-                    Skills.AzureDevOps    
+                    Skills.AzureDevOps,
+                    Skills.SqlServer    
                 }
             };
         }
@@ -78,7 +79,8 @@ namespace Resume.UI.Data
                                 in keeping the project going.  We switch Unifier to a configuration, workflow management, and back end support, but created a new UI, 
                                 and supplemented with custom API, that combined unifier with other internal services. 
                                 
-                                After heading up a proof of concept, we were able to obtaint he additional funding, to redo our implementation of Unifier.",
+                                After heading up a proof of concept, we were able to obtaint he additional funding, to redo our implementation of Unifier.
+                                This got me recognition from the CIO, which ment a lot to me, especially considering the CIO was over about 3k employees.",
                 Position = Positions.SoftwareEngineer4,
                 Skills = new Collection<Skill>()
                 {
@@ -405,6 +407,96 @@ namespace Resume.UI.Data
                 {
                     Skills.BusinessAnalysis,
 
+                }
+            };
+        }
+        public static Experience CampsV1Application
+        {
+            get => new Experience
+            {
+                Name = "Camps V1 Application",
+                Description = @"I was put on camping V1, after it had been created.  It was an Angular 1 app, with a batch process, and API, running on Sql Server. This my first application as an official developer role.  
+                                This is where I gained a lot of understanding in angular, general web development. 
+                                ",
+                Position = Positions.SoftwareEngineer4,
+                Skills = new Collection<Skill>()
+                {
+                    Skills.AngularJs,
+                }
+            };
+        }
+        public static Experience RecreationPropertiesSavingRelationships
+        {
+            get => new Experience
+            {
+                Name = "Recreation Properties Saving Relationships",
+                Description = @"On this application, about 6 month through a 12 month timeline, we finally got a look at the first prototypes that would be needed.  
+                                At this point we had tried to build the application with out prototypes, since we had a series of bad IXD hires.  When we finally got 
+                                our first glimps of what would be needed, I understood then, it would be a death march.  
+
+                                The primary business customer was the largest most developed, and most complicated camp.  They were also very affraid of change, and 
+                                senstive to us meeting certain deadlines.  After working long hours for many weeks, cutting every corner, and leaving out any feature
+                                that could be released in months coming, we finally launched only be late one month.   But the relationship with the business was strained. 
+                                The application was buggy, and trying to adjust to the new software was painful for them.  At this point many members of the team were burnt
+                                out and moving off the team, all of our leaders abandoned the project, and I took it over.  I first smoothed things over the business partner, 
+                                helping them to understand where we were at, and what we needed to be successful.   I commited to focus on the things they really needed, but 
+                                reset expectations to be a lot more reasonable.  Over the next coming months as we continued to fix major bugs and implement high value functionality
+                                the business went form crying in our meetings, to loving our team.  They even went out of there way to hand make us gifts. 
+
+                                I was able to help them to prioritize, and see the right features that should be developed to fit their needs.  Within 3 months under my leadership 
+                                the relationship turned from toxic, to trusted.  
+                                ",
+                Position = Positions.SoftwareEngineer3,
+                Skills = new Collection<Skill>()
+                {
+                    Skills.Leadership,
+                    Skills.BusinessAnalysis,
+                    Skills.Solutioning
+                }
+            };
+        }
+        public static Experience RecreationPropertiesMaximizingReservations
+        {
+            get => new Experience
+            {
+                Name = "Recreation Properties Saving Relationships",
+                Description = @"The primary business partner, the largest camp, had I really high requirement of being 90% effecient.  
+                                Meaning, during the most active months, they can have 90% efficiency in their reservations.  There original 
+                                requirement was to have us built a complex system, that would allow them to fit groups into puzzle piece areas, identifying
+                                both the time, and camp a particular group would be placed in.  This feature set would cost 100's of thosands of dollars, and 
+                                we did not have the time, nor would it provide the value, as this would likely be the only camp using it.  
+
+                                I had the idea, that with the right algorythm, we could have the system automatically fit the groups into the needed spots, 
+                                at 1/2 the cost and provide a set of features that other camps could utilize.  All of the managers, were very shakey on approaching
+                                them, but after enough conversations, presentations, and convicing. They decided to put the notion forth before the business partner. 
+                                After presenting the idea of the system automating the reservations, and still mainting the high efficiency, they bought off, on letting
+                                us apply this.   
+                                ",
+                Position = Positions.SoftwareEngineer3,
+                Skills = new Collection<Skill>()
+                {
+                    Skills.Leadership,
+                    Skills.BusinessAnalysis,
+                    Skills.Solutioning
+                }
+            };
+        }
+        public static Experience MissionaryApplicationCrashing
+        {
+            get => new Experience
+            {
+                Name = "Missionary Application Crashing",
+                Description = @"As a QA, we had an issue, where the application was crashing in produciton.  This was a very difficult issue for the
+                                developers to track down, and the logs were not providing a lot of help.  
+
+                                To help resolve this I knocked out some load testing skripts, that quickly added thousands of users on the system.  
+                                This made it very easy to find, and fix the issue.  
+                                ",
+                Position = Positions.QualityAssuranceEngineer3,
+                Skills = new Collection<Skill>()
+                {
+                    Skills.SilkPerformer,
+                    Skills.Troubleshooting,
                 }
             };
         }
