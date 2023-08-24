@@ -4,9 +4,9 @@
     @if(show)
     {
         <button @onclick="@(e => toggleShow())">
-            <h4>
+            <h5>
                 [-] @experience.Name
-            </h4>
+            </h5>
         </button>
         <div class="body">
             <div class="details">
@@ -35,9 +35,9 @@
     else
     {
         <button @onclick="@(e => toggleShow())">
-            <h4>
+            <h5>
                 [+] @experience.Name
-            </h4>
+            </h5>
         </button>
     }
 </div>

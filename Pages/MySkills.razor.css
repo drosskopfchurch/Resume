@@ -9,6 +9,7 @@ button {
 }
 .indent {
   margin-left: 16px;
+  margin-bottom: 8px;
 }
 .expand {
   color: black;

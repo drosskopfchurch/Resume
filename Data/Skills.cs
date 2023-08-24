@@ -550,7 +550,22 @@ namespace Resume.UI.Data
             {
                 Name = "Quality Assurance",
                 Proficiency = 5,
-                Description = "I have a lot of experience in software quality, including ui automation, load testing, and leading testing efforts.",
+                Description = @"
+                I have a lot of experience in software quality, including ui automation, load testing, and leading testing efforts.
+
+                My thoughts on QA: 
+                
+                Sizing: It is important to right size the QA effort.  The amount of effort taken to verify code written to land an aircraft carrier, should not be the same effort used to test video game. 
+                Unit Testing: I find a lot of unit test to be security theater. When I interview engineers, I ask them about unit testing.  Many will admit to creating 1,000's, but when I ask them how often those unit tests have caught or prevented bugs.  The answer is always nearly zero.  So is there value in unit testing? Yes, but not in the way you think. 
+
+                When I talk to the same engineers about value.  They all noted that the unit test did help them think through what they were writing. They also noted that unit test added a lot of technical debt. 
+
+                Conclusion: It seems to me the highest value is in writing the test, and then discarding it afterwards. Except for limited part of the application where it makes sense. 
+
+                UI Testing: This is probably has the highest potential.  The problem with UI Testing is without proper guidance and education, UI testing ends up having a high false negative/positive rate.  Meaning test engineers spend most of their time tracing down why a test failed when it should have passed, and visa versa.  Writing stable UI test is an art, and one I feel familiar with. 
+
+                
+                ",
                 Skills = new List<Skill>(){
                     AutomatedTesting,
                     LoadTesting
@@ -617,6 +632,47 @@ namespace Resume.UI.Data
             {
                 Name = "Visual Studio Load Testing",
                 Proficiency = 4
+            };
+        }
+        public static Skill DevOps
+        {
+            get => new Skill
+            {
+                Name = "Dev Ops",
+                Proficiency = 3,
+                Description = "I have never been an Application System Engineer, but I have filled when I needed to.",
+                Skills = new List<Skill>(){
+                    CloudFoundry,
+                    YAML,
+                    Powershell
+                }
+            };
+        }
+        public static Skill CloudFoundry
+        {
+            get => new Skill
+            {
+                Name = "Cloud Foundry",
+                Proficiency = 3,
+                Description = "I have never been an administrator, but I have deployed a variety of apps to cloud foundry, utilizing a variety of unique cloud foundry features."
+            };
+        }
+        public static Skill YAML
+        {
+            get => new Skill
+            {
+                Name = "YAML",
+                Proficiency = 4,
+                Description = "I am fairly proficient in YAML scripting, including desigining, and templating."
+            };
+        }
+        public static Skill Powershell
+        {
+            get => new Skill
+            {
+                Name = "Powershell",
+                Proficiency = 4,
+                Description = "I feel pretty confident in this skill.  I have used this a lot in creating deployment tools, developer tools, reporting, even automating manual functions"
             };
         }
         // public static IList<Skill> All =>

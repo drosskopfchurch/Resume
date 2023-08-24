@@ -94,8 +94,8 @@ namespace Resume.UI.Data
         {
             get => new Experience
             {
-                Name = "Church Automation Classes",
-                Description = @"In an effort to increase the level of automation and technical knowledge among QA in the Church.  
+                Name = "UI Automation Classes",
+                Description = @"In an effort to increase the level of automation and technical knowledge among QA.  
                 I taught a series of Webdriver classes for 3 years.  Each class having the attendance of around 15 engineers.  
                 Many groups that were not automating before my classes, and were automating significantly more after.
 
@@ -459,7 +459,7 @@ namespace Resume.UI.Data
         {
             get => new Experience
             {
-                Name = "Recreation Properties Saving Relationships",
+                Name = "Recreation Properties Maximizing Reservations",
                 Description = @"The primary business partner, the largest camp, had I really high requirement of being 90% effecient.  
                                 Meaning, during the most active months, they can have 90% efficiency in their reservations.  There original 
                                 requirement was to have us built a complex system, that would allow them to fit groups into puzzle piece areas, identifying
