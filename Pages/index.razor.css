@@ -2,18 +2,18 @@
   display: flex;
 }
 .SuperPowers {
-  background-color: lightskyblue;
-  color: darkblue;
+  background-color: darkslateblue;
+  color: white;
   margin: 16px;
   padding: 16px;
-  border: darkblue 1px solid;
+  border: darkmagenta 1px solid;
   width: 50%;
   border-radius: 25px;
   height: 100%;
 }
 .Kryptonytes {
-  background-color: lightgreen;
-  color: darkgreen;
+  background-color: green;
+  color: white;
   margin: 16px;
   padding: 16px;
   border: darkgreen 1px solid;
